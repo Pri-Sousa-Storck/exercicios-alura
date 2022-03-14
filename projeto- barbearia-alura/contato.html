@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Contato - Babearia Alura</title>
+
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style.css">
+</head>
+	<body>
+		<header>
+			<div class="caixa">
+				<h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1>
+				<!--alt dentro dA tag img serve para fazer a descriçao da imagem-->
+
+				 <nav>
+				 	<ul>
+		                <li><a href="index.html">Home</a></li>
+		                <li><a href="produtos.html">Produtos</a></li>
+		                <li><a href="contato.html">Contato</a></li>
+	            	</ul>
+	           </nav>
+       		</div>
+		</header>
+
+<main>
+	<form>
+		<label for="nomeSobrenome">Nome e sobrenome</label>
+		<input type="text" id="nomeSobrenome" class="input-padrao" required><!-- palavra reservada required dentro da tag input torna obrigatório o preenchimento do campo, placeholder="" insere uma segestão de preenchimento ao campo -->
+			
+		<label for="email">E-mail</label>
+		<input type="email" id="email" class="input-padrao"required placeholder="seuemail@gmail.com">
+			
+		<label for="telefone">Telefone</label>
+		<input type="tel" id="telefone" class="input-padrao" required placeholder="(xx) xxxxx-xxxx">
+			
+		<label for="mensagem">Mensagem</label>
+		<textarea cols="70" rows="30" id="mensagem" class="input-padrao" required></textarea>
+		<!-- tag textarea, para entradas de texto de mais de uma linha, cols é referente ao numero de colunas e rows ao de linhas perimitndo alteração do tamamno da caixa de mensagens-->	
+		<fieldset><!--tag fieldset separa um grupo de formulários, funciona como uma <div> mas no lugar do <p> usamos <legend> que seria o título do grupo de campos no frmulário--> 
+			<legend>Como prefere receber nosso contato?</legend>
+			<label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email">E-mail</label>
+		
+			<label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone">Telefone</label>
+		
+			<label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked>Whatsapp</label>
+		</fieldset>
+	<!--palavra reservada checked para deixar marcado automaticamente nos inputs raio e checkbox-->
+	<!--o "name" do input radio igual faz com que todos os com o mesmo name façam parte do mesmo grupo permitindo apenas uma marcação entre eles-->
+		<fieldset>
+			<legend>Qual horário prefere ser atendido?</legend>
+			<select>
+			<option>Manhã</option>
+			<option>Tarde</option>
+			<option>Noite</option>
+			</select>
+		</fieldset>
+		<label class="checkbox"><input type="checkbox" checked> Gostaria de receber nossas mensagens por e-mail?</label>
+
+		<input type="submit" value="Enviar Formulário" class="enviar">
+	</form>
+
+	<table>
+		<thead><!--cabeçalho da tabela-->
+			<tr><!--<tr>table rows é o número de linhas da tabela-->
+				<th>Dia</th><!--células no cabeçalho-->
+				<th>Horário</th>
+			</tr>
+		</thead>
+		<tr>
+			<td>Segundas</td><!-- células da tabela-->
+			<td>8 ~ 20h</td>
+		</tr>
+		<tr>
+			<td>Quartas</td>
+			<td>8 ~ 20h</td>
+		</tr>
+		<tr>
+			<td>Sextas</td>
+			<td>8 ~ 20h</td>
+		</tr>
+	</table>
+</main>
+
+<footer>
+			<img src="logo-branco.png">
+			<p class="copyrigth">&copy; Copyright Barbearia Alura - 2022</p>
+		</footer>
+	</body>
+</html>
